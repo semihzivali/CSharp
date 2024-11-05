@@ -24,7 +24,7 @@ namespace Chapter02.UI.View
 
         Terminal sınıfının tüm üyeleri static olarak tanımlandığından kendisinin de static olması önerilir.
     */
-    internal class Terminal
+    internal static class Terminal   // Bir sınıfın tüm metodları static ise kendisinin de static olması önerilir.
     {
         /*
             SplashScreen herhangibir parametre almayan ve değer döndürmeyen (void) bir metottur.
@@ -61,13 +61,39 @@ namespace Chapter02.UI.View
         internal static void ShowMenu()
         {
             Console.Clear();
-            Console.WriteLine("Start");
-            Console.WriteLine("Point Table");
-            Console.WriteLine("Settings");
+            Console.WriteLine("Start (S)");
+            Console.WriteLine("Point Table (PT)");
+            Console.WriteLine("Settings (SET)");
             Console.WriteLine(GetText('_', 24));
-            Console.WriteLine("Exit");
+            Console.WriteLine("Exit (E) \n");
             Console.WriteLine("Please Choose One");
         }
+
+        internal static void GetUserInput()
+        {
+            var input = Console.ReadLine();  // geriye string döndürüyor.
+            var userInput = input.ToLower();
+            if (userInput == "S")
+            {
+                Console.WriteLine("Game starting.");
+            }
+            else if (userInput == "PT")
+            {
+                Console.WriteLine("Point table");
+            }
+            else if (userInput == "SET")
+            {
+                Console.WriteLine("Settings");
+            }
+            else if (userInput == "E")
+            {
+                Console.WriteLine("Game ending");
+            }
+            else
+            {
+                Console.WriteLine("Please select correct option");
+            }
+        } 
         static string GetText(char c, int count)
         {
             string result = string.Empty;
