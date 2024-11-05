@@ -15,6 +15,7 @@ internal class Program
         Terminal.SplashScreen("Semih");
         Terminal.ShowMenu();
         Terminal.GetUserInput();
+        Console.WriteLine("dskfds");
 
 
 
