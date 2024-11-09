@@ -72,7 +72,7 @@ namespace Chapter02.UI.View
         internal static void GetUserInput()
         {
             var input = Console.ReadLine();  // geriye string döndürüyor.
-            var userInput = input.ToLower();
+            var userInput = input.ToUpper();
             if (userInput == "S")
             {
                 Console.WriteLine("Game starting.");

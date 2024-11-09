@@ -16,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter00", "Chapter00\Chap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter02", "Chapter02\Chapter02.csproj", "{86C058D8-3BDC-4942-87FA-7AF765F5BE44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azon.WeatherLib", "Azon.WeatherLib\Azon.WeatherLib.csproj", "{151660AB-668B-4CDE-9F5E-4FC96176D308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azon.WeatherLib", "Azon.WeatherLib\Azon.WeatherLib.csproj", "{151660AB-668B-4CDE-9F5E-4FC96176D308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter03", "Chapter03\Chapter03.csproj", "{2BF2A107-0725-44BC-9373-A8DC92B0B690}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{151660AB-668B-4CDE-9F5E-4FC96176D308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{151660AB-668B-4CDE-9F5E-4FC96176D308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{151660AB-668B-4CDE-9F5E-4FC96176D308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF2A107-0725-44BC-9373-A8DC92B0B690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF2A107-0725-44BC-9373-A8DC92B0B690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF2A107-0725-44BC-9373-A8DC92B0B690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF2A107-0725-44BC-9373-A8DC92B0B690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
