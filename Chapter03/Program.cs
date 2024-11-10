@@ -15,9 +15,22 @@
 
                 //throw new ArgumentException("Argumen hatasi");
 
-                var silo = new HttpManager();
-                var result = silo.Send("http.\\movie.sdfjks", "");
-                Console.WriteLine(result);
+                //var silo = new HttpManager();
+                //var result = silo.Send("http.\\movie.sdfjks", "");
+                //Console.WriteLine(result);
+
+                Plane vecihi = new Plane { X = 10, Y = 20 };
+                vecihi.Draw();
+                vecihi.Fire();
+
+                Player mario = new Player { X=11, Y=12 };
+                mario.Draw();
+                mario.Jump();
+
+                GameObject go1 = vecihi;  // Bu mümkündür. vecihi bir Plane nesnesidir, ve plane nesneside bir GameObject nesnesidir.
+                go1.Draw();  // polymorphism. go1 Plane gibidir 
+                GameObject go2 = mario;
+                go2.Draw();
             }
             catch (DivideByZeroException eX)  // 0'a bölme hatası olursa bu blok çalışacak
             {
@@ -26,6 +39,10 @@
             catch (FileNotFoundException eX)
             {
                 Console.WriteLine($"{eX.Message}");
+            }
+            catch (InvalidUrlException ex)
+            {
+                Console.Write(ex.Message);
             }
             catch (Exception eX)  // try bloğunda ele alınmamış bir exeption varsa bu blok çalışır.
             {
@@ -73,6 +90,14 @@
                 value = amount,
                 ErrorMessage = "limit yetersiz"
             };
+        }
+
+        static void DrawLevel(string level, List<GameObject> gameObjects)
+        {
+            foreach(var go in gameObjects)
+            {
+                go.Draw();
+            }
         }
     }
 }
