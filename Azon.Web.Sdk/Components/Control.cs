@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Chapter05.Components
+﻿namespace Azon.Web.Sdk.Components
 {
     public abstract class Control
     {
@@ -12,7 +6,7 @@ namespace Chapter05.Components
         protected string? Name { get; set; }
         protected (double, double) Position { get; set; }    // bu tip tuple dır.
 
-        protected Control(int id, string name, (double,double) position) 
+        protected Control(int id, string name, (double, double) position)
         {
             Id = id;
             Name = name;
@@ -21,7 +15,7 @@ namespace Chapter05.Components
 
         public override string ToString()
         {
-            return $"{Id}|{this.GetType().Name}|{Name}|{Position}|";
+            return $"{Id}|{GetType().Name}|{Name}|{Position}|";
         }
     }
 }
