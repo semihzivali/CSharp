@@ -99,6 +99,11 @@ namespace Chapter04
                 entity.Update();
             }
         }
+
+        public void SaveGame()
+        {
+
+        }
     }
 
     public static class AbstractSampleApplication  // static sınıflar tanımladıları nesneiin örneğine ihtiyaç yokrut. no need to new()
