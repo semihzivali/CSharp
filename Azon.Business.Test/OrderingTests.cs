@@ -3,7 +3,7 @@ namespace Azon.Business.Test
     // Red(FAil), Green(Success), Blue(REfactor)
     public class OrderingTests
     {
-        [Fact]
+        [Fact]  // Bu ifade bir Attribute tipidir, runtime a bilgi veriyor. VS idesi bunu test olarak anlýyo ve test explorera ekliyo.
         public void CalculateTotal_ForNullOrder()
         {
             Order order = null;

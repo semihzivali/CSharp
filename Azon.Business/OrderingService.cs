@@ -3,10 +3,6 @@ namespace Azon.Business
 {
     public class OrderingService
     {
-        public OrderingService()
-        {
-        }
-
         public Result<decimal> CalculateTotal(Order order)
         {
             if (order == null)
@@ -17,15 +13,21 @@ namespace Azon.Business
                     ErrorMessage = "Invalid order"
                 };
             }
-            decimal total = order.Amount;
-            if (order.CustomerType== CustomerType.Gold)
+            
+            var discountStrategy = CustomerDiscountStrategyFactor.GetDiscountStrategy(order.CustomerType);
+            var total = discountStrategy.Apply(order.Amount);
+            
+            /*
+            switch (order.CustomerType)
             {
-                total = order.Amount * 0.90M;
+                case CustomerType.Gold:
+                    total = order.Amount * 0.90M;
+                    break;
+                case CustomerType.Blue:
+                    total = order.Amount * 0.95M;
+                    break;
             }
-            else if(order.CustomerType== CustomerType.Blue)
-            {
-                total = order.Amount * 0.95M;
-            }
+            */
             return new Result<decimal>
             {
                 Value = total,
