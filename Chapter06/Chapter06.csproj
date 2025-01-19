@@ -12,4 +12,8 @@
     <ProjectReference Include="..\Azon.Web.Sdk\Azon.Web.Sdk.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dto\" />
+  </ItemGroup>
+
 </Project>

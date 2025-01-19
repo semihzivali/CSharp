@@ -2,7 +2,7 @@
 using Azon.Web.Sdk.Contracts;
 using System.Text.Json;
 
-namespace Chapter06
+namespace Chapter06.Persistence
 {
     public class JsonPersistence
         : IFilePersistence

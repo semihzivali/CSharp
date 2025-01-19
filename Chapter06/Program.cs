@@ -1,5 +1,6 @@
 ﻿using Azon.Web.Persistence;
 using Azon.Web.Sdk.Components;
+using Chapter06.Persistence;
 
 namespace Chapter06
 {
